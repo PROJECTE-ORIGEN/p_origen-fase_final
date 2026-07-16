@@ -26,11 +26,7 @@ async function startAuthentication(panel) {
 
     while (true) {
 
-    const credencial = isMobile()
-
-    ? await mobileCredentialInput(log)
-
-    : await authInput(
+    const credencial = await authInput(
         log,
         "Introdueix la credencial assignada:"
     );
@@ -100,6 +96,12 @@ async function authWrite(log, text, className = "") {
 ========================================================== */
 
 function authInput(log, question = "") {
+
+    if(isMobile()){
+
+        return mobileCredentialInput(log, question);
+
+    }
 
     return new Promise(async resolve => {
 

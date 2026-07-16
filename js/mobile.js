@@ -73,51 +73,65 @@ function createMobileInput(){
 }
 
 /* ==========================================================
-   INPUT CREDENCIAL MÒBIL
+   CREDENCIAL MÒBIL
 ========================================================== */
 
-function mobileCredentialInput(log){
+async function mobileCredentialInput(log, question){
 
-    return new Promise(resolve=>{
+    return new Promise(async resolve=>{
 
-        const wrapper=document.createElement("div");
+        if(question){
 
-        wrapper.className="mobile-auth";
+            await authWrite(log, question);
 
-        wrapper.innerHTML=`
+        }
 
-            <input
-                id="mobileCredential"
-                autocomplete="off"
-                autocorrect="off"
-                autocapitalize="characters"
-                spellcheck="false"
-                placeholder="CREDENCIAL">
+        const wrapper = document.createElement("div");
+        wrapper.className = "mobile-auth";
 
-            <button>VALIDAR</button>
+        const input = document.createElement("input");
+        input.className = "mobile-auth-input";
 
-        `;
+        input.type = "text";
+        input.placeholder = "Credencial";
+
+        input.autocomplete = "off";
+        input.autocorrect = "off";
+        input.autocapitalize = "characters";
+        input.spellcheck = false;
+
+        const button = document.createElement("button");
+        button.className = "mobile-auth-button";
+        button.textContent = "VALIDAR";
+
+        wrapper.appendChild(input);
+        wrapper.appendChild(button);
 
         log.appendChild(wrapper);
 
-        const input=wrapper.querySelector("input");
-        const button=wrapper.querySelector("button");
+        setTimeout(()=>{
 
-        input.focus();
+            input.focus();
 
-        button.onclick=()=>{
+        },100);
+
+        function finish(){
+
+            const value = input.value.trim().toUpperCase();
 
             wrapper.remove();
 
-            resolve(input.value.trim().toUpperCase());
+            resolve(value);
 
-        };
+        }
 
-        input.addEventListener("keydown",(e)=>{
+        button.addEventListener("click",finish);
 
-            if(e.key==="Enter"){
+        input.addEventListener("keydown",(event)=>{
 
-                button.click();
+            if(event.key==="Enter"){
+
+                finish();
 
             }
 

@@ -634,54 +634,71 @@ input{
 }
 
 /* ==========================================================
-   INPUT CREDENCIAL MÒBIL
+   CREDENCIAL · MÒBIL
 ========================================================== */
 
 .mobile-auth{
 
-    margin-top:22px;
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    margin-top:24px;
+
+    align-items:flex-start;
 
 }
 
-.mobile-auth input{
+.mobile-auth-input{
 
     width:100%;
+
+    box-sizing:border-box;
 
     padding:14px 16px;
 
-    background:#06111d;
+    background:rgba(8,18,30,.92);
 
-    border:1px solid rgba(120,220,255,.35);
-
-    color:#fff;
-
-    font-family:inherit;
-
-    font-size:18px;
-
-    letter-spacing:3px;
+    border:1px solid rgba(120,220,255,.30);
 
     border-radius:8px;
 
-    outline:none;
+    color:#8fdfff;
 
-    text-transform:uppercase;
+    font-family:inherit;
+
+    font-size:17px;
+
+    letter-spacing:2px;
+
+    outline:none;
 
 }
 
-.mobile-auth button{
+.mobile-auth-input:focus{
+
+    border-color:#73ffd9;
+
+    box-shadow:
+        0 0 12px rgba(115,255,217,.35);
+
+}
+
+.mobile-auth-button{
 
     width:100%;
 
-    margin-top:14px;
-
     padding:14px;
 
-    background:rgba(70,170,255,.12);
+    background:rgba(18,60,90,.85);
 
-    border:1px solid rgba(120,220,255,.35);
+    border:1px solid rgba(120,220,255,.30);
 
-    color:#9ee8ff;
+    border-radius:8px;
+
+    color:#8fdfff;
 
     font-family:inherit;
 
@@ -690,5 +707,22 @@ input{
     letter-spacing:3px;
 
     cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.mobile-auth-button:active{
+
+    transform:scale(.98);
+
+}
+
+.mobile-auth-button:hover{
+
+    border-color:#73ffd9;
+
+    box-shadow:
+        0 0 12px rgba(115,255,217,.25);
 
 }
