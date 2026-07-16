@@ -21,7 +21,7 @@ async function startVideo(){
 
                 <source
                     src="media/video/IMG_0399.MOV"
-                    type="video/mp4">
+                    type="video/quicktime">
 
             </video>
 
