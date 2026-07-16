@@ -1,0 +1,169 @@
+/* ==========================================================
+   PROJECTE ORIGEN
+   INCOMING.CSS
+   Pantalla de comunicació entrant
+========================================================== */
+
+
+/* ==========================================================
+   PANELL
+========================================================== */
+
+.incoming-panel{
+
+    width:700px;
+    max-width:90%;
+
+    margin:auto;
+
+    padding:50px;
+
+    border-radius:22px;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(35,95,170,.18) 0%,
+            rgba(12,30,48,.12) 45%,
+            transparent 75%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(8,16,28,.96),
+            rgba(5,10,18,.98)
+        );
+
+    border:2px solid rgba(11,103,137,.69);
+
+    box-shadow:
+        inset 0 0 60px rgba(90,180,255,.05),
+        0 0 70px rgba(0,120,255,.08);
+
+}
+
+.incoming-panel.video-mode{
+
+    padding:12px;
+
+}
+
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
+.panel-divider{
+
+    width:100%;
+    height:1px;
+
+    margin:35px 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(120,220,255,.35),
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   PARTICIPANTS
+========================================================== */
+
+.participants{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.separator{
+
+    color:rgba(180,220,255,.45);
+
+    font-size:20px;
+
+}
+
+.call-narax{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#cf82ff;
+
+    letter-spacing:3px;
+
+    text-shadow:
+        0 0 16px rgba(220,120,255,.35);
+
+}
+
+.call-zyn{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#78ffe2;
+
+    letter-spacing:3px;
+
+    text-shadow:
+        0 0 16px rgba(120,255,220,.35);
+
+}
+
+
+/* ==========================================================
+   PRIORITAT
+========================================================== */
+
+.blink{
+
+    animation:priorityBlink 1.6s infinite;
+
+}
+
+@keyframes priorityBlink{
+
+    0%,100%{
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        text-shadow:
+            0 0 12px #ffd55b,
+            0 0 30px #ffd55b;
+
+    }
+
+}
+
+
+/* ==========================================================
+   AJUSTOS
+========================================================== */
+
+.incoming-panel .terminal-center{
+
+    width:auto;
+
+}

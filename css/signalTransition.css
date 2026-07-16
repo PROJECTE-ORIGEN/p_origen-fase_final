@@ -1,0 +1,302 @@
+/* ==========================================================
+   SIGNAL TRANSITION
+========================================================== */
+
+#signalTransition{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#000;
+
+    pointer-events:none;
+
+    z-index:999999;
+
+    opacity:0;
+
+}
+
+/* ---------------------------------------------------------- */
+
+.signal-start{
+
+    opacity:0;
+
+}
+
+/* ---------------------------------------------------------- */
+
+@keyframes signalGlitch{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateX(0);
+
+        filter:brightness(1);
+
+    }
+
+    10%{
+
+        opacity:.12;
+
+        transform:translateX(-3px);
+
+    }
+
+    18%{
+
+        opacity:.05;
+
+        transform:translateX(2px);
+
+    }
+
+    30%{
+
+        opacity:.20;
+
+        transform:translateX(-1px);
+
+    }
+
+    45%{
+
+        opacity:.08;
+
+        transform:translateX(3px);
+
+    }
+
+    60%{
+
+        opacity:.45;
+
+        filter:brightness(.65);
+
+    }
+
+    80%{
+
+        opacity:.75;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        filter:brightness(0);
+
+    }
+
+}
+
+/* ==========================================================
+   FALLADA DE SENYAL
+========================================================== */
+
+.signal-freeze{
+
+    animation:
+        freeze .18s forwards;
+
+}
+
+.signal-glitch{
+
+    animation:
+        glitch .9s forwards;
+
+}
+
+.signal-black{
+
+    opacity:0;
+
+    transition:opacity .35s;
+
+}
+
+/* ---------------------------------------------------------- */
+
+@keyframes freeze{
+
+    to{
+
+        filter:brightness(.85);
+
+    }
+
+}
+
+/* ---------------------------------------------------------- */
+
+@keyframes glitch{
+
+    0%{
+
+        transform:none;
+
+        filter:brightness(1);
+
+    }
+
+    12%{
+
+        transform:translateX(-3px);
+
+    }
+
+    20%{
+
+        transform:translateX(3px);
+
+    }
+
+    30%{
+
+        transform:translateY(-2px);
+
+    }
+
+    45%{
+
+        transform:translateX(2px);
+
+        filter:brightness(.7);
+
+    }
+
+    60%{
+
+        transform:translateX(-2px);
+
+    }
+
+    100%{
+
+        transform:none;
+
+        filter:brightness(0);
+
+    }
+
+}
+
+/* ==========================================================
+   LÍNIES DE TRANSMISSIÓ
+========================================================== */
+
+.video-frame{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.video-frame::before,
+.video-frame::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-10%;
+
+    width:120%;
+
+    height:2px;
+
+    background:rgba(255,255,255,.9);
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+.video-frame::before{
+
+    top:30%;
+
+}
+
+.video-frame::after{
+
+    top:68%;
+
+}
+
+/* Només apareixen durant el glitch */
+
+.signal-glitch::before{
+
+    animation:scan1 .45s linear;
+
+}
+
+.signal-glitch::after{
+
+    animation:scan2 .35s linear .15s;
+
+}
+
+/* ---------------------------------------------------------- */
+
+@keyframes scan1{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(-120px);
+
+    }
+
+    20%{
+
+        opacity:.9;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(320px);
+
+    }
+
+}
+
+@keyframes scan2{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(-180px);
+
+    }
+
+    20%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(280px);
+
+    }
+
+}

@@ -1,0 +1,533 @@
+/* ==========================================================
+   ENDING 3.0
+========================================================== */
+
+#ending{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:56px 72px 52px;
+
+    background:
+
+        radial-gradient(
+
+            circle at center,
+
+            rgba(40,130,200,.10),
+
+            transparent 72%
+
+        ),
+
+        #02060b;
+
+    overflow:hidden;
+
+}
+
+/* ---------------------------------------------------------- */
+
+#ending::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(120,220,255,.07),
+
+            transparent 62%
+
+        );
+
+    filter:blur(70px);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.ending-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    z-index:2;
+
+}
+
+/* ---------------------------------------------------------- */
+
+.ending-logo{
+
+    width:180px;
+
+    flex-shrink:0;
+
+    opacity:.96;
+    
+    animation:logoGlow 5s ease-in-out infinite;
+
+}
+
+/* ---------------------------------------------------------- */
+
+.ending-line{
+
+    flex:1;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(120,220,255,0),
+
+            rgba(120,220,255,.95),
+
+            rgba(220,255,255,.95),
+
+            rgba(120,220,255,.95),
+
+            rgba(120,220,255,0)
+
+        );
+
+    box-shadow:
+
+        0 0 14px rgba(120,220,255,.85),
+
+        0 0 34px rgba(120,220,255,.35);
+
+    animation:endingLineGlow 4s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   CENTRE
+========================================================== */
+
+.ending-content{
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex:1;
+
+    position:relative;
+
+}
+
+.ending-label,
+.ending-agent,
+.ending-divider,
+.ending-archive{
+
+    text-align:center;
+
+}
+
+/* Glow del centre */
+
+.ending-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:760px;
+
+    height:760px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(70,170,255,.10),
+
+            rgba(70,170,255,.03),
+
+            transparent 72%
+
+        );
+
+    filter:blur(45px);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   MISSIÓ COMPLETADA
+========================================================== */
+
+.ending-label{
+
+    position:relative;
+
+    font-size:15px;
+
+    letter-spacing:10px;
+
+    text-transform:uppercase;
+
+    color:#8fe6ff;
+
+    text-shadow:
+
+        0 0 10px rgba(120,220,255,.95),
+
+        0 0 28px rgba(120,220,255,.45);
+
+}
+
+/* ==========================================================
+   AGENT
+========================================================== */
+
+.ending-agent{
+
+    position:relative;
+
+    margin-top:22px;
+
+    font-size:40px;
+
+    font-weight:300;
+
+    letter-spacing:8px;
+
+    color:white;
+
+    text-shadow:
+
+        0 0 18px rgba(255,255,255,.18),
+
+        0 0 42px rgba(120,220,255,.20);
+
+}
+
+/* ==========================================================
+   MISSATGE
+========================================================== */
+
+.ending-message{
+
+    max-width:560px;
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#cfeeff;
+
+    letter-spacing:1.5px;
+
+    text-align:left;
+
+}
+
+.ending-message p{
+
+    margin:0;
+
+}
+
+.ending-message p + p{
+
+    margin-top:10px;
+
+}
+
+/* ==========================================================
+   SIGNATURES
+========================================================== */
+
+.ending-signatures{
+
+    width:240px;
+
+    flex-shrink:0;
+
+    filter:
+        drop-shadow(0 0 18px rgba(120,220,255,.25));
+
+}
+
+/* ==========================================================
+   APARICIÓ
+========================================================== */
+
+.ending-header,
+.ending-label,
+.ending-agent,
+.ending-message,
+.ending-signatures{
+
+    opacity:0;
+
+    transform:translateY(18px);
+
+    animation:
+
+        endingReveal .9s forwards;
+
+}
+
+.ending-header{
+
+    animation-delay:.15s;
+
+}
+
+.ending-label{
+
+    animation-delay:.45s;
+
+}
+
+.ending-agent{
+
+    animation-delay:.75s;
+
+}
+
+.ending-message{
+
+    animation-delay:1.05s;
+
+}
+
+.ending-signatures{
+
+    animation-delay:1.35s;
+
+}
+
+/* ---------------------------------------------------------- */
+
+@keyframes endingReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.ending-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:flex-end;
+
+    z-index:2;
+
+}
+
+@keyframes endingLineGlow{
+
+    0%,100%{
+
+        opacity:.75;
+
+        box-shadow:
+
+            0 0 10px rgba(120,220,255,.55),
+
+            0 0 24px rgba(120,220,255,.22);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        box-shadow:
+
+            0 0 18px rgba(120,220,255,1),
+
+            0 0 40px rgba(120,220,255,.55),
+
+            0 0 80px rgba(120,220,255,.25);
+
+    }
+
+}
+
+@keyframes logoGlow{
+
+    0%,100%{
+
+        filter:
+
+            drop-shadow(0 0 12px rgba(120,220,255,.25));
+
+    }
+
+    50%{
+
+        filter:
+
+            drop-shadow(0 0 24px rgba(120,220,255,.55));
+
+    }
+
+}
+
+.ending-divider{
+
+    width:170px;
+
+    height:1px;
+
+    margin:22px auto;
+
+    background:rgba(120,220,255,.35);
+
+    box-shadow:
+
+        0 0 12px rgba(120,220,255,.45);
+
+}
+
+.ending-archive{
+
+    font-size:13px;
+
+    letter-spacing:7px;
+
+    color:#7fdcff;
+
+    opacity:.75;
+
+    text-shadow:
+
+        0 0 10px rgba(120,220,255,.45);
+
+}
+
+.ending-fade{
+
+    opacity:0;
+
+    transform:scale(.985);
+
+    filter:blur(8px);
+
+    transition:
+
+        opacity 1.6s,
+
+        filter 1.6s,
+
+        transform 1.6s;
+
+}
+
+.command-fixed{
+
+    color:#7fdcff;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 8px rgba(120,220,255,.45);
+
+}
+
+.command-executed{
+
+    color:#6f8795;
+
+    opacity:.55;
+
+}
+
+.terminal-hint{
+
+    margin-top:10px;
+
+    margin-left:22px;
+
+    color:rgba(140,220,255,.55);
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+}
+
+.cursor-fast{
+
+    animation:blink .15s infinite;
+
+}
+
+.ending-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+    margin-top:65px;
+
+}

@@ -1,0 +1,64 @@
+/* ==========================================================
+   FOLDER
+========================================================== */
+
+#folderView{
+
+    width:min(860px,100%);
+    margin:0 auto;
+
+}
+
+.folder-toolbar{
+
+    margin-bottom:28px;
+
+}
+
+.back-button{
+
+    background:none;
+
+    border:none;
+
+    color:#8fdfff;
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.back-button:hover{
+
+    color:white;
+
+    transform:translateX(-4px);
+
+}
+
+.folder-title{
+
+    font-size:32px;
+
+    letter-spacing:4px;
+
+    color:#eef8ff;
+
+}
+
+.folder-description{
+
+    margin-top:10px;
+
+    margin-bottom:28px;
+
+    color:#8fdfff;
+
+}

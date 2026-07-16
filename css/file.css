@@ -1,0 +1,89 @@
+/* ==========================================================
+   FILES
+========================================================== */
+
+.file{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin:14px 0;
+
+    padding:16px 18px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(120,220,255,.08);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.file:hover{
+
+    background:rgba(120,220,255,.08);
+
+    border-color:rgba(120,220,255,.22);
+
+    transform:translateX(6px);
+
+}
+
+.file-icon{
+
+    width:38px;
+
+    flex-shrink:0;
+
+    text-align:center;
+
+    font-size:28px;
+
+}
+
+.file-info{
+
+    flex:1;
+
+}
+
+.file-title{
+
+    color:#eef8ff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.file-author{
+
+    margin-top:2px;
+
+    color:#8fdfff;
+
+    font-size:14px;
+
+    font-style:italic;
+
+}
+
+.file-name{
+
+    margin-top:8px;
+
+    color:rgba(180,220,255,.55);
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+}

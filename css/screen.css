@@ -1,0 +1,651 @@
+/* ==========================================================
+   PROJECTE ORIGEN
+   SCREEN.CSS
+========================================================== */
+
+/* ==========================================================
+   PANTALLA
+========================================================== */
+
+#screen{
+
+    flex:1;
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow-y:auto;
+
+    padding:34px 42px;
+
+}
+
+/* ==========================================================
+   TEXT GENERAL
+========================================================== */
+
+.terminal-line{
+
+    width:100%;
+
+    color:#d9ecff;
+
+    font-size:16px;
+
+    line-height:1.85;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+
+    white-space:pre-wrap;
+
+    font-weight:400;
+
+}
+
+
+.terminal-center{
+
+    width:100%;
+
+    text-align:center;
+
+    color:#d9ecff;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    letter-spacing:2px;
+
+    margin:10px 0;
+
+}
+
+
+/* ==========================================================
+   COLORS
+========================================================== */
+
+.system{
+
+    color:#7fd8ff;
+
+}
+
+.success{
+
+    color:#7effa8;
+
+}
+
+.warning{
+
+    color:#ffd96d;
+
+}
+
+@keyframes priorityPulse{
+
+    0%{
+
+        opacity:.6;
+
+        text-shadow:none;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        text-shadow:
+
+            0 0 18px rgba(255,220,80,.7),
+
+            0 0 40px rgba(255,220,80,.45);
+
+    }
+
+    100%{
+
+        opacity:.6;
+
+        text-shadow:none;
+
+    }
+
+}
+
+.error{
+
+    color:#ff8b8b;
+
+}
+
+
+/* ==========================================================
+   TÍTOL DEL PANELL
+========================================================== */
+
+.panel-title{
+
+    font-size:24px;
+
+    font-weight:500;
+
+    letter-spacing:4px;
+
+    color:rgb(239, 242, 243);
+
+    margin-bottom:28px;
+
+}
+
+
+/* ==========================================================
+   SUBTEXT
+========================================================== */
+
+.panel-subtitle{
+
+    color:#8ecfff;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+}
+
+
+/* ==========================================================
+   BOTONS
+========================================================== */
+
+.terminal-button{
+
+    display:block;
+
+    margin:45px auto 0 auto;
+
+    padding:14px 30px;
+
+    background:transparent;
+
+    color:#7fd8ff;
+
+    border:
+
+        1px solid rgba(120,220,255,.28);
+
+    border-radius:8px;
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+.terminal-button:hover{
+
+    color:white;
+
+    border-color:#73ffd9;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 0 20px rgba(115,255,217,.25);
+
+}
+
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.terminal-input{
+
+    width:430px;
+
+    max-width:100%;
+
+    margin-top:28px;
+
+    padding:12px 4px;
+
+    background:transparent;
+
+    border:none;
+
+    border-bottom:
+
+        1px solid rgba(120,220,255,.25);
+
+    outline:none;
+
+    color:white;
+
+    font-family:inherit;
+
+    font-size:17px;
+
+    letter-spacing:1px;
+
+}
+
+
+.terminal-input::placeholder{
+
+    color:rgba(180,220,255,.28);
+
+}
+
+
+/* ==========================================================
+   PROMPT
+========================================================== */
+
+.prompt{
+
+    color:#7fd8ff;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   CURSOR
+========================================================== */
+
+.cursor{
+
+    display:inline-block;
+
+    width:8px;
+
+    height:1.1em;
+
+    margin-left:2px;
+
+    background:#7fd8ff;
+
+    animation:blink .8s infinite;
+
+}
+
+
+/* ==========================================================
+   BARRA DE PROGRÉS
+========================================================== */
+
+.progress{
+
+    color:#73ffd9;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ==========================================================
+   EFECTES
+========================================================== */
+
+.glow{
+
+    text-shadow:
+
+        0 0 10px currentColor,
+
+        0 0 20px currentColor;
+
+}
+
+/* ==========================================================
+   ANIMACIONS
+========================================================== */
+
+@keyframes fadePanel{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px) scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes blinkText{
+
+    50%{
+
+        opacity:.25;
+
+    }
+
+}
+
+/* ==========================================================
+   PANELL DE COMUNICACIÓ
+========================================================== */
+
+.incoming-panel{
+
+    width:700px;
+    max-width:90%;
+
+    margin:auto;
+
+    padding:50px;
+
+    border-radius:22px;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(35,95,170,.18) 0%,
+            rgba(12,30,48,.12) 45%,
+            transparent 75%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(8,16,28,.96),
+            rgba(5,10,18,.98)
+        );
+
+    border:2px solid rgba(11, 103, 137, 0.691);
+
+    box-shadow:
+        inset 0 0 60px rgba(90,180,255,.05),
+        0 0 70px rgba(0,120,255,.08);
+
+    transition:
+    opacity .25s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+
+}
+
+/* ---------- AUTORITZACIÓ ---------- */
+
+.access-ok{
+
+    color:#78ffb4;
+    font-weight:600;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    text-shadow:
+        0 0 8px rgba(120,255,180,.7);
+
+    margin-top:16px;
+
+}
+
+/* línia */
+
+.panel-divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:35px 0;
+
+    background:
+
+        linear-gradient(
+
+            to right,
+
+            transparent,
+
+            rgba(120,220,255,.35),
+
+            transparent
+
+        );
+
+}
+
+/* participants */
+
+.participants{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.separator{
+
+    color:rgba(180,220,255,.45);
+
+    font-size:20px;
+
+}
+
+/* noms */
+
+.narax{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#cf82ff;
+
+    letter-spacing:3px;
+
+    text-shadow:0 0 16px rgba(220,120,255,.35);
+
+}
+
+.zyn{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#78ffe2;
+
+    letter-spacing:3px;
+
+    text-shadow:0 0 16px rgba(120,255,220,.35);
+
+}
+
+/* prioritat */
+
+.blink{
+
+    animation:priorityBlink 1.6s infinite;
+
+}
+
+@keyframes priorityBlink{
+
+    0%,100%{
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        text-shadow:
+
+            0 0 12px #ffd55b,
+
+            0 0 30px #ffd55b;
+
+    }
+
+}
+
+.incoming-panel .terminal-center{
+
+    width:auto;
+
+}
+
+/* ==========================================================
+   PROGRESS BAR
+========================================================== */
+
+.progress{
+
+    font-size:17px;
+
+    letter-spacing:1px;
+
+    margin:8px 0 24px;
+
+}
+
+.progress-fill{
+
+    color:#69ffd2;
+
+    text-shadow:
+        0 0 10px rgba(90,255,200,.45);
+
+}
+
+.progress-empty{
+
+    color:rgba(120,220,255,.20);
+
+}
+
+/* ==========================================================
+   BOOT MODE
+========================================================== */
+
+.boot-mode{
+
+    transition:.6s;
+
+    text-align:left;
+
+    align-items:flex-start;
+
+}
+
+.boot-mode .panel-title{
+
+    font-size:20px;
+
+    margin-bottom:25px;
+
+}
+
+.boot-mode .participants{
+
+    display:none;
+
+}
+
+.boot-mode .panel-divider{
+
+    display:none;
+
+}
+
+.boot-mode .warning{
+
+    display:none;
+
+}
+
+/* ==========================================================
+   FLASH D'AUTORITZACIÓ
+========================================================== */
+
+.panel-authorized{
+
+    animation:panelAuthorized .35s ease;
+
+}
+
+@keyframes panelAuthorized{
+
+    0%{
+
+        border-color:rgba(120,220,255,.20);
+
+        box-shadow:
+            0 0 40px rgba(0,160,255,.10);
+
+    }
+
+    50%{
+
+        border-color:#78ffb4;
+
+        box-shadow:
+
+            0 0 20px #78ffb4,
+
+            0 0 60px rgba(120,255,180,.7),
+
+            inset 0 0 30px rgba(120,255,180,.35);
+
+    }
+
+    100%{
+
+        border-color:rgba(120,220,255,.20);
+
+        box-shadow:
+            0 0 40px rgba(0,160,255,.10);
+
+    }
+
+}
+
+.panel-ringing{
+
+    animation:panelPulseBlue 1.8s infinite;
+
+}
+
+.system-text{
+
+    color:#8fdfff;
+
+}

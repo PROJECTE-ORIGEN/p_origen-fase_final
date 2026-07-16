@@ -1,0 +1,301 @@
+/* ==========================================================
+   PROJECTE ORIGEN
+   ALIAS.CSS
+========================================================== */
+
+
+/* ==========================================================
+   CONTENIDOR
+========================================================== */
+
+#aliasContainer{
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin-top:28px;
+
+}
+
+
+/* ==========================================================
+   BOTONS ANTICS
+========================================================== */
+
+.alias-button{
+
+    background:transparent;
+    border:1px solid rgba(120,220,255,.25);
+    color:#dff7ff;
+
+    padding:16px;
+
+    border-radius:10px;
+
+    font-family:inherit;
+    font-size:18px;
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.alias-button:hover{
+
+    border-color:#78ffe2;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(120,255,220,.25);
+
+}
+
+
+/* ==========================================================
+   GRAELLA
+========================================================== */
+
+#aliasGrid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:22px;
+
+    margin-top:35px;
+
+    transition:.5s ease;
+
+}
+
+
+/* ==========================================================
+   TARGETA
+========================================================== */
+
+.alias-card{
+
+    padding:18px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(120,220,255,.18);
+
+    background:rgba(255,255,255,.02);
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.25s;
+
+}
+
+.alias-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#78ffe2;
+
+    box-shadow:
+        0 0 22px rgba(120,255,220,.25);
+
+}
+
+
+/* ==========================================================
+   NOM
+========================================================== */
+
+.alias-name{
+
+    font-size:24px;
+
+    color:white;
+
+    letter-spacing:4px;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.alias-error{
+
+    border-color:#ff6666;
+
+    box-shadow:
+        0 0 18px rgba(255,80,80,.45);
+
+    animation:aliasError .45s ease;
+
+}
+
+@keyframes aliasError{
+
+    0%{
+
+        background:rgba(255,70,70,0);
+
+    }
+
+    25%{
+
+        background:rgba(255,70,70,.35);
+
+        border-color:#ff6d6d;
+
+        box-shadow:
+            0 0 18px rgba(255,70,70,.45);
+
+    }
+
+    100%{
+
+        background:transparent;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TARGETA CORRECTA
+========================================================== */
+
+.alias-success{
+
+    border-color:#7bffb6;
+
+    background:rgba(120,255,180,.08);
+
+    box-shadow:
+        0 0 25px rgba(120,255,180,.45);
+
+    transform:scale(1.05);
+
+    transition:.35s;
+
+}
+
+
+/* ==========================================================
+   DESAPARICIÓ
+========================================================== */
+
+.alias-fade{
+
+    opacity:0;
+
+    transform:scale(.85);
+
+    transition:.3s;
+
+}
+
+.alias-hide{
+
+    display:none;
+
+}
+
+
+/* ==========================================================
+   CONFIRMAT
+========================================================== */
+
+.alias-confirmed{
+
+    display:flex !important;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.alias-confirmed .alias-card{
+
+    width:360px;
+
+    max-width:100%;
+
+}
+
+.alias-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.alias-selected{
+
+    width:360px;
+
+    transform:scale(1.05);
+
+    transition:.45s;
+
+}
+
+
+/* ==========================================================
+   ANIMACIÓ
+========================================================== */
+
+@keyframes aliasCenter{
+
+    from{
+
+        opacity:.5;
+
+        transform:translateY(10px) scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+.agent-id{
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.35);
+
+}
+
+.separator-line{
+
+    margin:18px 0;
+
+    text-align:center;
+
+    color:rgba(140,190,220,.30);
+
+    letter-spacing:2px;
+
+    user-select:none;
+
+}

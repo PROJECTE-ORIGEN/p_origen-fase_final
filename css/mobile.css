@@ -1,0 +1,448 @@
+/* ==========================================================
+   PROJECTE ORIGEN
+   MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+    html,
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+    body{
+
+        font-size:15px;
+
+        overflow-x:hidden;
+
+    }
+
+    #terminal{
+
+        width:100%;
+        height:100vh;
+
+        margin:0;
+
+        border:none;
+        border-radius:0;
+
+    }
+
+    #screen{
+
+        padding:18px;
+
+    }
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+#terminal-header{
+
+    padding:10px 14px;
+
+    font-size:11px;
+
+}
+
+.header-left{
+
+    gap:10px;
+
+}
+
+.window-buttons{
+
+    transform:scale(.8);
+
+    transform-origin:left center;
+
+}
+
+.logo{
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+}
+
+.header-right{
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+    text-align:right;
+
+}
+
+/* ==========================================================
+   TERMINAL
+========================================================== */
+
+.terminal-output{
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+.terminal-line{
+
+    font-size:14px;
+
+}
+
+.terminal-command{
+
+    font-size:14px;
+
+}
+
+.system-text{
+
+    word-break:break-word;
+
+}
+
+.command-fixed{
+
+    word-break:break-word;
+
+}
+
+.dialogue-box{
+
+    width:100%;
+
+    max-width:100%;
+
+}
+
+.dialogue-message{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+img,
+video{
+
+    max-width:100%;
+    height:auto;
+
+}
+
+/* ==========================================================
+   DIRECTORY
+========================================================== */
+
+.directory-window{
+
+    padding:16px;
+
+}
+
+.directory-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+}
+
+.directory-title{
+
+    font-size:18px;
+
+}
+
+.directory-subtitle{
+
+    font-size:12px;
+
+}
+
+.file-row{
+
+    padding:10px 8px;
+
+}
+
+.file-name{
+
+    font-size:14px;
+
+}
+
+.file-type{
+
+    font-size:11px;
+
+}
+
+.file-size{
+
+    font-size:11px;
+
+}
+
+.folder{
+
+    padding:12px;
+
+}
+
+.folder-title{
+
+    font-size:15px;
+
+}
+
+.directory-button{
+
+    width:100%;
+
+}
+
+/* ==========================================================
+   VIEWERS
+========================================================== */
+
+.viewer-window{
+
+    width:100%;
+    height:auto;
+
+    max-width:100%;
+
+    margin:0;
+
+    border-radius:10px;
+
+}
+
+.image-viewer img{
+
+    max-width:100%;
+
+    max-height:55vh;
+
+    object-fit:contain;
+
+}
+
+.video-viewer video{
+
+    width:100%;
+
+    height:auto;
+
+    max-height:55vh;
+
+}
+
+.audio-viewer{
+
+    padding:18px;
+
+}
+
+.audio-viewer audio{
+
+    width:100%;
+
+}
+
+.viewer-title{
+
+    font-size:16px;
+
+}
+
+.viewer-subtitle{
+
+    font-size:12px;
+
+}
+
+.viewer-close{
+
+    width:42px;
+    height:42px;
+
+    font-size:22px;
+
+}
+
+*{
+
+    max-width:100%;
+
+    -webkit-user-select:none;
+    user-select:none;
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+/* ==========================================================
+   ENDING
+========================================================== */
+
+#ending{
+
+    padding:28px 22px;
+
+}
+
+.ending-header{
+
+    gap:18px;
+
+}
+
+.ending-logo{
+
+    width:120px;
+
+}
+
+.ending-line{
+
+    height:1px;
+
+}
+
+.ending-content{
+
+    margin:30px 0;
+
+}
+
+.ending-label{
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+}
+
+.ending-agent{
+
+    margin-top:16px;
+
+    font-size:28px;
+
+    letter-spacing:4px;
+
+}
+
+.ending-divider{
+
+    width:120px;
+
+    margin:18px auto;
+
+}
+
+.ending-archive{
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+}
+
+.ending-footer{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:26px;
+
+}
+
+.ending-message{
+
+    max-width:100%;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    text-align:center;
+
+}
+
+.ending-signatures{
+
+    width:170px;
+
+    margin:0;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    min-height:46px;
+
+}
+
+input{
+
+    font-size:16px;
+
+}
+
+#terminal{
+
+    overflow:hidden;
+
+}
+
+.cursor{
+
+    font-size:.9em;
+
+}
+
+#background-grid{
+
+    opacity:.25;
+
+}
+
+#background-stars{
+
+    opacity:.35;
+
+}
+
+.dialogue-box{
+
+    padding:18px;
+
+}
+
+.dialogue-avatar{
+
+    width:42px;
+
+}
+
+}

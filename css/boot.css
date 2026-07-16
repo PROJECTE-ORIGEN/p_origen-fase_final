@@ -1,0 +1,149 @@
+/* ==========================================================
+   PROJECTE ORIGEN
+   BOOT.CSS
+========================================================== */
+
+
+/* ==========================================================
+   ESTRUCTURA
+========================================================== */
+
+.boot-screen{
+
+    width:100%;
+
+}
+
+.boot-box{
+
+    width:760px;
+    max-width:100%;
+    margin:0 auto;
+
+}
+
+
+/* ==========================================================
+   TÍTOL
+========================================================== */
+
+.boot-title{
+
+    font-size:24px;
+    font-weight:500;
+    letter-spacing:4px;
+    color:#edf4ff;
+
+    text-align:left;
+
+    margin-bottom:30px;
+
+    text-shadow:
+        0 0 10px rgba(170,230,255,.18);
+
+}
+
+
+/* ==========================================================
+   LOG
+========================================================== */
+
+#bootLog{
+
+    width:100%;
+
+    margin-top:25px;
+
+    text-align:left;
+
+}
+
+
+/* ==========================================================
+   LÍNIES
+========================================================== */
+
+.boot-line{
+
+    display:block;
+
+    color:#98dfff;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+    text-align:left;
+
+    margin-bottom:8px;
+
+}
+
+
+/* ==========================================================
+   BARRA
+========================================================== */
+
+.boot-progress{
+
+    display:block;
+
+    text-align:left;
+
+    font-size:16px;
+
+    letter-spacing:1px;
+
+    color:#73ffd9;
+
+    margin-bottom:18px;
+
+}
+
+.boot-fill{
+
+    color:#73ffd9;
+
+    text-shadow:0 0 10px rgba(100,255,210,.45);
+
+}
+
+.boot-empty{
+
+    color:rgba(120,220,255,.20);
+
+}
+
+.boot-check{
+
+    color:#73ffaf;
+
+}
+
+.progress-bar{
+    color:#69ffd2;
+    text-shadow:0 0 8px rgba(80,255,180,.45);
+}
+
+
+/* ==========================================================
+   FINAL
+========================================================== */
+
+.boot-ok{
+
+    margin-top:28px;
+
+    color:#73ffaf;
+
+    font-size:22px;
+
+    letter-spacing:5px;
+
+    text-align:center;
+
+    width:100%;
+
+    display:block;
+
+}

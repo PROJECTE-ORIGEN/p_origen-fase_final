@@ -1,0 +1,165 @@
+/* ==========================================================
+   PROJECTE ORIGEN
+   BASE
+========================================================== */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+/* ---------- BODY ---------- */
+
+body{
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:var(--font-main);
+
+    color:var(--color-text);
+
+    background:
+        radial-gradient(circle at center,
+            #16394d 0%,
+            #0b1722 35%,
+            #05080c 75%,
+            #020304 100%);
+
+    position:relative;
+
+}
+
+/* ==========================================================
+   HALO CENTRAL
+========================================================== */
+
+#background-glow{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(circle at center,
+
+            rgba(70,180,255,.22),
+
+            rgba(70,180,255,.08) 35%,
+
+            transparent 70%);
+
+    filter:blur(90px);
+
+    z-index:0;
+
+}
+
+/* ==========================================================
+   MICROTEXTURA
+========================================================== */
+
+#background-grid{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.18;
+
+    background-image:
+
+        radial-gradient(
+
+            rgba(150,220,255,.18) .8px,
+
+            transparent .9px
+
+        );
+
+    background-size:18px 18px;
+
+    z-index:1;
+
+}
+
+/* ==========================================================
+   ESTRELLES
+========================================================== */
+
+#background-stars{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.08;
+
+    background-image:
+
+        radial-gradient(white .9px, transparent 1px);
+
+    background-size:180px 180px;
+
+    z-index:2;
+
+}
+
+/* ==========================================================
+   VIGNETA
+========================================================== */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    box-shadow:
+
+        inset 0 0 220px rgba(0,0,0,.78),
+
+        inset 0 0 120px rgba(0,0,0,.45);
+
+    z-index:3;
+
+}
+
+/* ==========================================================
+   TERMINAL
+========================================================== */
+
+#terminal{
+
+    position:relative;
+
+    z-index:10;
+
+}
