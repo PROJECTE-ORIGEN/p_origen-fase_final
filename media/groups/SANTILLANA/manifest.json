@@ -1,0 +1,164 @@
+{
+    "group": "SANTILLANA",
+
+    "folders": [
+
+        {
+            "name": "Art restaurat",
+            "icon": "photo",
+	    "description":"Quadres recuperats durant la missió.",
+            "files": [
+
+                {
+		    "title": "La nit estelada",
+                    "author": "Vincent van Gogh",
+                    "name": "Berta, Elsa, Emma i Vinyet",
+                    "file": "Art restaurat/Berta, Elsa, Emma i Vinyet.jpeg",
+                    "type": "image"
+                },
+
+                {
+		    "title": "La Gioconda (Monna Lisa)",
+                    "author": "Leonardo da Vinci",
+                    "name": "Nico, Pau i Uri",
+                    "file": "Art restaurat/Nico, Pau i Uri.jpeg",
+                    "type": "image"
+                },
+
+		{
+		    "title": "La noia de la perla",
+                    "author": "Johannes Vermeer",
+                    "name": "Bru, Ivan i Víctor",
+                    "file": "Art restaurat/Bru, Ivan i Víctor.jpeg",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Art gegant",
+            "icon": "image",
+	    "description":"Recreació artística a partir d'una imatge, per ser vista des de l'aire.",
+            "files": [
+
+                {
+		    "title": "Woody",
+                    "author": "Toy story",
+                    "name": "Imatge original",
+                    "file": "Art gegant/original.jpg",
+                    "type": "image"
+                },
+
+                {
+                    "name": "Resultat 1",
+                    "file": "Art gegant/foto_1.JPG",
+                    "type": "image"
+                },
+
+                {
+                    "name": "Resultat 2",
+                    "file": "Art gegant/foto_2.JPG",
+                    "type": "image"
+                },
+
+		{
+                    "name": "Resultat i membres del grup",
+                    "file": "Art gegant/foto_3.JPG",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Ball de bastons",
+            "icon": "basto",
+	    "description":"Danses tradicionals recuperades.",
+            "files": [
+
+                {
+		    "title": "El ball de la civada",
+                    "author": "Tradicional",
+                    "name": "Ball de bastons_1",
+                    "file": "Ball de bastons/Bastons_1.mov",
+                    "type": "video"
+                },
+
+                {
+		    "title": "El ball de la civada",
+                    "author": "Tradicional",
+                    "name": "Ball de bastons_2",
+                    "file": "Ball de bastons/Bastons_2.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Dansa",
+            "icon": "dance",
+	    "description":"Tutorial de coreografies icòniques.",
+            "files": [
+
+                {
+		    "title": "No rompas más",
+                    "author": "Coyote Dax",
+                    "name": "Tutorial del ball",
+                    "file": "Dansa/No rompas mas.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Foley",
+            "icon": "video",
+	    "description":"Registres d'àudio reconstruïts.",
+            "files": [
+
+                {
+                    "name": "UP (escena)",
+                    "file": "Foley/UP.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Música",
+            "icon": "music",
+	    "description":"Cançons reinterpretades i salvades durant la missió.",
+            "files": [
+
+                {
+		    "title": "La gent que estimo",
+                    "author": "Oques grasses",
+                    "name": "Enregistrament",
+                    "file": "Música/IMG_8931.mp4",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+	{
+            "name": "Descàrrega",
+            "icon": "download",
+	    "description":"Descarrega tots els arxius del grup Santillana.",
+            "files": [
+
+                {
+                    "name": "ARXIUS SANTILLANA_Projecte Origen.zip",
+                    "file": "SANTILLANA.zip",
+                    "type": "zip"
+                }
+
+            ]
+        }
+
+    ]
+}
