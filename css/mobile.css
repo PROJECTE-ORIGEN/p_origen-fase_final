@@ -548,11 +548,9 @@ input{
 
     .participants{
 
-        gap:12px;
+    flex-direction:column;
 
-        flex-wrap:wrap;
-
-    }
+}
 
     .call-narax,
     .call-zyn{
