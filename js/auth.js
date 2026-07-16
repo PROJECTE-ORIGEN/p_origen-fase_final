@@ -137,23 +137,7 @@ function authInput(log, question = "") {
 
         if(isMobile()){
 
-    mobileInput = createMobileInput(
-
-        (textValue)=>{
-
-            value = textValue.toUpperCase();
-
-            refresh();
-
-        },
-
-        ()=>{
-
-            finish();
-
-        }
-
-    );
+    mobileInput = createMobileInput();
 
 }
 
@@ -215,7 +199,15 @@ function authInput(log, question = "") {
 
     });
 
-    mobileInput.addEventListener("keydown", handler);
+    mobileInput.addEventListener("keydown",(event)=>{
+
+    if(event.key==="Enter"){
+
+        finish();
+
+    }
+
+});
 
 }else{
 

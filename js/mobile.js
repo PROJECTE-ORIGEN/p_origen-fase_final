@@ -35,7 +35,7 @@ function focusMobileInput(input){
    INPUT MÒBIL
 ========================================================== */
 
-function createMobileInput(onChange, onEnter){
+function createMobileInput(){
 
     if(!isMobile()) return null;
 
@@ -53,22 +53,6 @@ function createMobileInput(onChange, onEnter){
     input.style.opacity = "0";
 
     document.body.appendChild(input);
-
-    input.addEventListener("input",()=>{
-
-        onChange(input.value);
-
-    });
-
-    input.addEventListener("keydown",(e)=>{
-
-        if(e.key==="Enter"){
-
-            onEnter(input.value);
-
-        }
-
-    });
 
     focusMobileInput(input);
 
