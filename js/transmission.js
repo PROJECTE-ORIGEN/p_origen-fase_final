@@ -58,7 +58,7 @@ async function startTransmission(panel){
 
     for(let i=0;i<=100;i++){
 
-        const total = 28;
+        const total = isMobile() ? 16 : 28;
 
         const filled = Math.floor(i/100*total);
 
