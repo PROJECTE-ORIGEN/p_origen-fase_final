@@ -735,23 +735,24 @@ input{
 
     #aliasGrid{
 
-        display:flex;
+        display:flex !important;
 
-        flex-direction:column;
+        flex-direction:column !important;
 
-        gap:14px;
+        gap:16px !important;
 
-        margin-top:24px;
+        grid-template-columns:none !important;
 
     }
 
     .alias-card{
 
-        width:100%;
+        width:100% !important;
 
-        padding:16px;
+        box-sizing:border-box;
 
     }
+
 
     .alias-name{
 
