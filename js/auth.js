@@ -123,29 +123,6 @@ function authInput(log, question = "") {
 
         log.appendChild(line);
 
-        let mobileInput = null;
-
-    if(isMobile()){
-
-        mobileInput = document.createElement("input");
-
-        mobileInput.type = "text";
-
-        mobileInput.autocomplete = "off";
-        mobileInput.autocorrect = "off";
-        mobileInput.autocapitalize = "characters";
-        mobileInput.spellcheck = false;
-
-        mobileInput.style.position = "fixed";
-        mobileInput.style.left = "-9999px";
-        mobileInput.style.opacity = "0";
-
-        document.body.appendChild(mobileInput);
-
-        focusMobileInput(mobileInput);
-
-    }
-
         let value = "";
 
         function refresh() {
