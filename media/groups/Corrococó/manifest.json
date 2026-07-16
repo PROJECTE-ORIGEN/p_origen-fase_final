@@ -1,0 +1,163 @@
+{
+    "group": "CORROCOCÓ",
+
+    "folders": [
+
+        {
+            "name": "Art restaurat",
+            "icon": "photo",
+	    "description":"Quadres recuperats durant la missió.",
+            "files": [
+
+                {
+		    "title": "La nit estelada",
+                    "author": "Vincent van Gogh",
+                    "name": "Elena, Emma, Marta i Olivia",
+                    "file": "Art restaurat/Elena, Emma, Marta i Olivia.jpeg",
+                    "type": "image"
+                },
+
+                {
+		    "title": "La Gioconda (Monna Lisa)",
+                    "author": "Leonardo da Vinci",
+                    "name": "Abel, Guiu, Jana i Naim",
+                    "file": "Art restaurat/Abel, Guiu, Jana i Naim.jpeg",
+                    "type": "image"
+                },
+
+		{
+		    "title": "El crit",
+                    "author": "Edvard Munch",
+                    "name": "Adrià, Lluc i Nil",
+                    "file": "Art restaurat/Adrià, Lluc i Nil.jpeg",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Art gegant",
+            "icon": "image",
+	    "description":"Recreació artística a partir d'una imatge, per ser vista des de l'aire.",
+            "files": [
+
+                {
+		    "title": "Paleta de pintor",
+                    "name": "Imatge original",
+                    "file": "Art gegant/original.png",
+                    "type": "image"
+                },
+
+                {
+                    "name": "Resultat",
+                    "file": "Art gegant/foto_1.JPG",
+                    "type": "image"
+                },
+
+                {
+                    "name": "Paleta de pintor i membres del grup",
+                    "file": "Art gegant/foto_2.JPG",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Ball de bastons",
+            "icon": "basto",
+	    "description":"Danses tradicionals recuperades.",
+            "files": [
+
+                {
+                    "name": "Ball de bastons",
+                    "file": "Ball de bastons/Bastons_vídeo.mp4",
+                    "type": "video"
+                },
+
+                {
+                    "name": "Foto de grup",
+                    "file": "Ball de bastons/Bastons_foto.jpg",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Dansa",
+            "icon": "dance",
+	    "description":"Tutorial de coreografies icòniques.",
+            "files": [
+
+                {
+		    "title": "Antes muerta que sencilla",
+                    "author": "María Isabel",
+                    "name": "Tutorial del ball",
+                    "file": "Dansa/Antes muerta que sencilla.mp4",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Foley",
+            "icon": "video",
+	    "description":"Registres d'àudio reconstruïts.",
+            "files": [
+
+                {
+                    "name": "Ice Age (escena)",
+                    "file": "Foley/Ice Age.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Música",
+            "icon": "music",
+	    "description":"Cançons reinterpretades i salvades durant la missió.",
+            "files": [
+
+                {
+                    "name": "I love rock'n'roll (part 1)",
+                    "file": "Música/Part 1.MOV",
+                    "type": "video"
+                },
+
+		{
+                    "name": "I love rock'n'roll (part 2)",
+                    "file": "Música/Part 2.MOV",
+                    "type": "video"
+                },
+
+		{
+                    "name": "I love rock'n'roll (part 3)",
+                    "file": "Música/Part 3.MOV",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+	{
+            "name": "Descàrrega",
+            "icon": "download",
+	    "description":"Descarrega tots els arxius del grup Corrococó.",
+            "files": [
+
+                {
+                    "name": "ARXIUS CORROCOCÓ_Projecte Origen.zip",
+                    "url": "https://github.com/PROJECTE-ORIGEN/p_origen-fase_final/releases/download/v1.0/CORROCOCO.zip",
+                    "type": "zip"
+                }
+
+            ]
+        }
+
+    ]
+}
