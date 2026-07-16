@@ -1,0 +1,165 @@
+{
+    "group": "SKATE&GO",
+
+    "folders": [
+
+        {
+            "name": "Art restaurat",
+            "icon": "photo",
+	    "description":"Quadres recuperats durant la missió.",
+            "files": [
+
+                {
+		    "title": "La nit estelada",
+                    "author": "Vincent van Gogh",
+                    "name": "Ari, Chloé i Mariona",
+                    "file": "Art restaurat/Ari, Chloé i Mariona.jpeg",
+                    "type": "image"
+                },
+
+                {
+		    "title": "La Gioconda (Monna Lisa)",
+                    "author": "Leonardo da Vinci",
+                    "name": "Ari, Maria i Mel",
+                    "file": "Art restaurat/Ari, Maria i Mel.jpeg",
+                    "type": "image"
+                },
+
+		{
+		    "title": "El crit",
+                    "author": "Edvard Munch",
+                    "name": "Guillem i Unai",
+                    "file": "Art restaurat/Guillem i Unai.jpeg",
+                    "type": "image"
+                },
+
+		{
+		    "title": "La noia de la perla",
+                    "author": "Johannes Vermeer",
+                    "name": "Erika, Inés i Nira",
+                    "file": "Art restaurat/Erika, Inés i Nira.jpeg",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Art gegant",
+            "icon": "image",
+	    "description":"Recreació artística a partir d'una imatge, per ser vista des de l'aire.",
+            "files": [
+
+                {
+		    "title": "Super Mario",
+                    "name": "Imatge original",
+                    "file": "Art gegant/original.jpeg",
+                    "type": "image"
+                },
+
+                {
+                    "name": "Resultat",
+                    "file": "Art gegant/foto_1.JPG",
+                    "type": "image"
+                },
+
+                {
+                    "name": "Super Mario i membres del grup",
+                    "file": "Art gegant/foto_2.JPG",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Ball de bastons",
+            "icon": "basto",
+	    "description":"Danses tradicionals recuperades.",
+            "files": [
+
+                {
+		    "title": "El ball de la civada",
+                    "author": "Tradicional",
+                    "name": "Ball de bastons_1",
+                    "file": "Ball de bastons/Bastons_1.mov",
+                    "type": "video"
+                },
+
+                {
+		    "title": "El ball de la civada",
+                    "author": "Tradicional",
+                    "name": "Ball de bastons_2",
+                    "file": "Ball de bastons/Bastons_2.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Dansa",
+            "icon": "dance",
+	    "description":"Tutorial de coreografies icòniques.",
+            "files": [
+
+                {
+		    "title": "Gangnam style",
+                    "author": "PSY",
+                    "name": "Tutorial del ball",
+                    "file": "Dansa/Gangnam style.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Foley",
+            "icon": "video",
+	    "description":"Registres d'àudio reconstruïts.",
+            "files": [
+
+                {
+                    "name": "Ice Age (escena)",
+                    "file": "Foley/Ice Age.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Música",
+            "icon": "music",
+	    "description":"Cançons reinterpretades i salvades durant la missió.",
+            "files": [
+
+                {
+		    "title": "Sort de tu",
+                    "author": "Oques Grasses",
+                    "name": "Enregistrament",
+                    "file": "Música/IMG_8963.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+	{
+            "name": "Descàrrega",
+            "icon": "download",
+	    "description":"Descarrega tots els arxius del grup Skate&Go.",
+            "files": [
+
+                {
+                    "name": "ARXIUS SKATE&GO_Projecte Origen.zip",
+                    "file": "SKATE&GO.zip",
+                    "type": "zip"
+                }
+
+            ]
+        }
+
+    ]
+}
