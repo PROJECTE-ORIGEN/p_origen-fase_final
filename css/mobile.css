@@ -532,3 +532,47 @@ input{
 
 }
 
+/* ==========================================================
+   MÒBIL · TRUCADA ENTRANT
+========================================================== */
+
+@media (max-width:768px){
+
+    .incoming-panel{
+
+        width:92%;
+
+        padding:28px 20px;
+
+    }
+
+    .participants{
+
+        gap:12px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .call-narax,
+    .call-zyn{
+
+        font-size:22px;
+
+        letter-spacing:1px;
+
+    }
+
+    .separator{
+
+        font-size:16px;
+
+    }
+
+    .panel-divider{
+
+        margin:22px 0;
+
+    }
+
+}
