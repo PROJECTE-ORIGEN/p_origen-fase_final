@@ -137,6 +137,23 @@ async function startArchive(){
 
 }
 
+/* ==========================================================
+   NOM VISIBLE DE LA UNITAT
+========================================================== */
+
+function getVisibleUnitat(unitat){
+
+    switch(unitat){
+
+        case "Corrococo":
+            return "Corrococó";
+
+        default:
+            return unitat;
+
+    }
+
+}
 
 /* ==========================================================
    BOTÓ TRANSFERÈNCIA
@@ -204,7 +221,7 @@ function showTransferButton(){
         <div>${AGENT.alias}</div>
 
         <div class="label">UNITAT</div>
-        <div>${AGENT.unitat}</div>
+        <div>${getVisibleUnitat(AGENT.unitat)}</div>
 
         <div class="label">ESTAT</div>
         <div class="agent-status">✓ AUTORITZAT</div>
