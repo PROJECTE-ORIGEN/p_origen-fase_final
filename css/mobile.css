@@ -726,3 +726,43 @@ input{
         0 0 12px rgba(115,255,217,.25);
 
 }
+
+.alias-grid{
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:12px;
+
+}
+
+.alias-button{
+
+    min-width:0;
+
+    font-size:20px;
+
+    letter-spacing:2px;
+
+    padding:18px 10px;
+
+}
+
+.progress-container{
+
+    width:90%;
+
+    margin:auto;
+
+}
+
+.progress-bar{
+
+    font-size:12px;
+
+}
+
+.progress-percent{
+
+    font-size:18px;
+
+}
