@@ -1,14 +1,11 @@
-/* ==========================================================
-   PROJECTE ORIGEN
-   DOWNLOAD
-========================================================== */
-
 function downloadFile(file){
 
     const link = document.createElement("a");
 
     link.href =
-        MANIFEST.basePath + file.file;
+        file.url
+            ? file.url
+            : MANIFEST.basePath + file.file;
 
     link.download = "";
 
