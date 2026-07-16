@@ -127,6 +127,8 @@ function authInput(log, question = "") {
 
         let mobileInput = null;
 
+        let finished = false;
+
         function refresh() {
 
             text.textContent = value;
@@ -143,12 +145,17 @@ function authInput(log, question = "") {
 
         function finish(){
 
-    document.removeEventListener("keydown",handler);
+    if(finished) return;
+
+    finished = true;
+
+    document.removeEventListener("keydown", handler);
 
     cursor.remove();
 
     if(mobileInput){
 
+        mobileInput.blur();
         mobileInput.remove();
 
     }

@@ -54,8 +54,17 @@ function createMobileInput(){
 
     document.body.appendChild(input);
 
-    focusMobileInput(input);
+    function focusMobileInput(input){
 
+    if(!MOBILE) return;
+
+    requestAnimationFrame(()=>{
+
+        input.focus();
+
+    });
+
+}
     return input;
 
 }
