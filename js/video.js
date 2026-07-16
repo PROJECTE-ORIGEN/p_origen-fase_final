@@ -13,10 +13,11 @@ async function startVideo(){
 
         <div class="video-frame">
 
-            <video
-                id="originVideo"
-                autoplay
-                playsinline>
+                <video
+                    id="originVideo"
+                    autoplay
+                    playsinline
+                    preload="auto">
 
                 <source
                     src="media/video/IMG_0399.MOV"
@@ -46,7 +47,18 @@ async function startVideo(){
 
     const video = document.getElementById("originVideo");
 
-    video.volume = 1;
+video.volume = 1;
+video.currentTime = 0;
+
+try{
+
+    await video.play();
+
+}catch(error){
+
+    console.log("VIDEO ERROR:", error);
+
+}
 
     video.onended = async ()=>{
 
