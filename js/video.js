@@ -21,7 +21,6 @@ async function startVideo(){
 
                 <source
                     src="media/video/IMG_0399.MOV"
-                    type="video/quicktime">
 
             </video>
 
@@ -48,17 +47,13 @@ async function startVideo(){
     const video = document.getElementById("originVideo");
 
 video.volume = 1;
-video.currentTime = 0;
+video.muted = false;
 
-try{
+video.load();
 
-    await video.play();
-
-}catch(error){
-
-    console.log("VIDEO ERROR:", error);
-
-}
+video.play().catch(err=>{
+    console.log(err);
+});
 
     video.onended = async ()=>{
 
