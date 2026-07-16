@@ -574,3 +574,61 @@ input{
     }
 
 }
+
+/* ==========================================================
+   MÒBIL · BOOT
+========================================================== */
+
+@media (max-width:768px){
+
+    .boot-box{
+
+        width:100%;
+
+    }
+
+    .boot-title{
+
+        font-size:18px;
+
+        letter-spacing:2px;
+
+        margin-bottom:20px;
+
+    }
+
+    .boot-line{
+
+        font-size:13px;
+
+        letter-spacing:1px;
+
+        margin-bottom:6px;
+
+        word-break:break-word;
+
+    }
+
+    .boot-progress{
+
+        font-size:12px;
+
+        letter-spacing:0;
+
+        white-space:normal;
+
+        overflow-wrap:anywhere;
+
+    }
+
+    .boot-ok{
+
+        font-size:18px;
+
+        letter-spacing:2px;
+
+        margin-top:20px;
+
+    }
+
+}
