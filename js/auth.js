@@ -125,12 +125,6 @@ function authInput(log, question = "") {
 
         let value = "";
 
-        let mobileInput = null;
-
-        let finished = false;
-
-        refresh();
-
         function refresh() {
 
             text.textContent = value;
@@ -138,33 +132,6 @@ function authInput(log, question = "") {
             log.scrollTop = log.scrollHeight;
 
         }
-
-        if(isMobile()){
-
-    mobileInput = createMobileInput();
-
-}
-
-        function finish(){
-
-    if(finished) return;
-
-    finished = true;
-
-    document.removeEventListener("keydown", handler);
-
-    cursor.remove();
-
-    if(mobileInput){
-
-        mobileInput.blur();
-        mobileInput.remove();
-
-    }
-
-    resolve(value.trim());
-
-}
 
         function handler(event) {
 
@@ -182,7 +149,11 @@ function authInput(log, question = "") {
 
             if (event.key === "Enter") {
 
-                finish();
+                document.removeEventListener("keydown", handler);
+
+                cursor.remove();
+
+                resolve(value.trim());
 
                 return;
 
@@ -198,31 +169,7 @@ function authInput(log, question = "") {
 
         }
 
-        if(isMobile()){
-
-    mobileInput.addEventListener("input", ()=>{
-
-        value = mobileInput.value.toUpperCase();
-
-        refresh();
-
-    });
-
-    mobileInput.addEventListener("keydown",(event)=>{
-
-    if(event.key==="Enter"){
-
-        finish();
-
-    }
-
-});
-
-}else{
-
-    document.addEventListener("keydown", handler);
-
-}
+        document.addEventListener("keydown", handler);
 
     });
 
