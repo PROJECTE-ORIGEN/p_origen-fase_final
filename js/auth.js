@@ -26,7 +26,11 @@ async function startAuthentication(panel) {
 
     while (true) {
 
-    const credencial = await authInput(
+    const credencial = isMobile()
+
+    ? await mobileCredentialInput(log)
+
+    : await authInput(
         log,
         "Introdueix la credencial assignada:"
     );

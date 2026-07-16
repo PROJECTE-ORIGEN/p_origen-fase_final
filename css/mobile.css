@@ -632,3 +632,63 @@ input{
     }
 
 }
+
+/* ==========================================================
+   INPUT CREDENCIAL MÒBIL
+========================================================== */
+
+.mobile-auth{
+
+    margin-top:22px;
+
+}
+
+.mobile-auth input{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    background:#06111d;
+
+    border:1px solid rgba(120,220,255,.35);
+
+    color:#fff;
+
+    font-family:inherit;
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    border-radius:8px;
+
+    outline:none;
+
+    text-transform:uppercase;
+
+}
+
+.mobile-auth button{
+
+    width:100%;
+
+    margin-top:14px;
+
+    padding:14px;
+
+    background:rgba(70,170,255,.12);
+
+    border:1px solid rgba(120,220,255,.35);
+
+    color:#9ee8ff;
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+}

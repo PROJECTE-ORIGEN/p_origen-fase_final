@@ -71,3 +71,58 @@ function createMobileInput(){
     return input;
 
 }
+
+/* ==========================================================
+   INPUT CREDENCIAL MÒBIL
+========================================================== */
+
+function mobileCredentialInput(log){
+
+    return new Promise(resolve=>{
+
+        const wrapper=document.createElement("div");
+
+        wrapper.className="mobile-auth";
+
+        wrapper.innerHTML=`
+
+            <input
+                id="mobileCredential"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="characters"
+                spellcheck="false"
+                placeholder="CREDENCIAL">
+
+            <button>VALIDAR</button>
+
+        `;
+
+        log.appendChild(wrapper);
+
+        const input=wrapper.querySelector("input");
+        const button=wrapper.querySelector("button");
+
+        input.focus();
+
+        button.onclick=()=>{
+
+            wrapper.remove();
+
+            resolve(input.value.trim().toUpperCase());
+
+        };
+
+        input.addEventListener("keydown",(e)=>{
+
+            if(e.key==="Enter"){
+
+                button.click();
+
+            }
+
+        });
+
+    });
+
+}
