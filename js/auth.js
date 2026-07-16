@@ -123,6 +123,29 @@ function authInput(log, question = "") {
 
         log.appendChild(line);
 
+        let mobileInput = null;
+
+    if(isMobile()){
+
+        mobileInput = document.createElement("input");
+
+        mobileInput.type = "text";
+
+        mobileInput.autocomplete = "off";
+        mobileInput.autocorrect = "off";
+        mobileInput.autocapitalize = "characters";
+        mobileInput.spellcheck = false;
+
+        mobileInput.style.position = "fixed";
+        mobileInput.style.left = "-9999px";
+        mobileInput.style.opacity = "0";
+
+        document.body.appendChild(mobileInput);
+
+        focusMobileInput(mobileInput);
+
+    }
+
         let value = "";
 
         function refresh() {
@@ -151,6 +174,12 @@ function authInput(log, question = "") {
 
                 document.removeEventListener("keydown", handler);
 
+                if(mobileInput){
+
+                    mobileInput.remove();
+
+                }
+
                 cursor.remove();
 
                 resolve(value.trim());
@@ -169,7 +198,23 @@ function authInput(log, question = "") {
 
         }
 
-        document.addEventListener("keydown", handler);
+        if(isMobile()){
+
+    mobileInput.addEventListener("input", ()=>{
+
+        value = mobileInput.value.toUpperCase();
+
+        refresh();
+
+    });
+
+    mobileInput.addEventListener("keydown", handler);
+
+}else{
+
+    document.addEventListener("keydown", handler);
+
+}
 
     });
 

@@ -25,6 +25,8 @@ function focusMobileInput(input){
 
         input.focus();
 
+        input.click();
+
     },150);
 
 }
