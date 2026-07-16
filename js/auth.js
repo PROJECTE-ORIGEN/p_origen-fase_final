@@ -123,6 +123,8 @@ function authInput(log, question = "") {
 
         log.appendChild(line);
 
+        refresh();
+        
         let value = "";
 
         let mobileInput = null;

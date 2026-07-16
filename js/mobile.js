@@ -35,6 +35,18 @@ function focusMobileInput(input){
    INPUT MÒBIL
 ========================================================== */
 
+function focusMobileInput(input){
+
+    if(!MOBILE) return;
+
+    requestAnimationFrame(()=>{
+
+        input.focus();
+
+    });
+
+}
+
 function createMobileInput(){
 
     if(!isMobile()) return null;
@@ -54,17 +66,8 @@ function createMobileInput(){
 
     document.body.appendChild(input);
 
-    function focusMobileInput(input){
+    focusMobileInput(input);
 
-    if(!MOBILE) return;
-
-    requestAnimationFrame(()=>{
-
-        input.focus();
-
-    });
-
-}
     return input;
 
 }
