@@ -1,0 +1,160 @@
+{
+    "group": "LES NITS FOSQUES",
+
+    "folders": [
+
+        {
+            "name": "Art restaurat",
+            "icon": "photo",
+	    "description":"Quadres recuperats durant la missió.",
+            "files": [
+
+                {
+		    "title": "La nit estelada",
+                    "author": "Vincent van Gogh",
+                    "name": "Ivet, Leyre, Marc i Marta",
+                    "file": "Art restaurat/Ivet, Leyre, Marc i Marta.jpeg",
+                    "type": "image"
+                },
+
+                {
+		    "title": "La Gioconda (Monna Lisa)",
+                    "author": "Leonardo da Vinci",
+                    "name": "Arlet, Berta, Eloi i Emma",
+                    "file": "Art restaurat/Arlet, Berta, Eloi i Emma.jpeg",
+                    "type": "image"
+                },
+
+		{
+		    "title": "El crit",
+                    "author": "Edvard Munch",
+                    "name": "Irene, Jordi, Maria i Paula",
+                    "file": "Art restaurat/Irene, Jordi, Maria i Paula.jpeg",
+                    "type": "image"
+                },
+
+		{
+		    "title": "La noia de la perla",
+                    "author": "Johannes Vermeer",
+                    "name": "Arnau, Bernat, Leo i Oriol",
+                    "file": "Art restaurat/Arnau, Bernat, Leo i Oriol.jpeg",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Art gegant",
+            "icon": "image",
+	    "description":"Recreació artística a partir d'una imatge, per ser vista des de l'aire.",
+            "files": [
+
+                {
+		    "title": "Autoretrat",
+                    "author": "Vincent van Gogh",
+                    "name": "Imatge original",
+                    "file": "Art gegant/original.jpg",
+                    "type": "image"
+                },
+
+                {
+                    "name": "Resultat",
+                    "file": "Art gegant/foto_1.JPG",
+                    "type": "image"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Ball de bastons",
+            "icon": "basto",
+	    "description":"Danses tradicionals recuperades.",
+            "files": [
+
+                {
+		    "title": "El ball de la civada",
+                    "author": "Tradicional",
+                    "name": "Ball de bastons_1",
+                    "file": "Ball de bastons/Bastons_1.MOV",
+                    "type": "video"
+                },
+
+                {
+		    "title": "El ball de la civada",
+                    "author": "Tradicional",
+                    "name": "Ball de bastons_2",
+                    "file": "Ball de bastons/Bastons_2.MOV",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Dansa",
+            "icon": "dance",
+	    "description":"Tutorial de coreografies icòniques.",
+            "files": [
+
+                {
+		    "title": "Saturday night",
+                    "author": "WHIGFIELD",
+                    "name": "Tutorial del ball",
+                    "file": "Dansa/Saturday night.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Foley",
+            "icon": "video",
+	    "description":"Registres d'àudio reconstruïts.",
+            "files": [
+
+                {
+                    "name": "UP (escena)",
+                    "file": "Foley/UP.mov",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+        {
+            "name": "Música",
+            "icon": "music",
+	    "description":"Cançons reinterpretades i salvades durant la missió.",
+            "files": [
+
+                {
+		    "title": "Escuela de calor",
+                    "author": "Radio futura",
+                    "name": "Enregistrament",
+                    "file": "Música/IMG_9065.mp4",
+                    "type": "video"
+                }
+
+            ]
+        },
+
+	{
+            "name": "Descàrrega",
+            "icon": "download",
+	    "description":"Descarrega tots els arxius del grup Les nits fosques.",
+            "files": [
+
+                {
+                    "name": "ARXIUS LES NITS FOSQUES_Projecte Origen.zip",
+                    "file": "LES_NITS_FOSQUES.zip",
+                    "type": "zip"
+                }
+
+            ]
+        }
+
+    ]
+}
