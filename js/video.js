@@ -83,9 +83,7 @@ video.addEventListener("error",()=>{
 
 video.play().catch(err=>{
 
-    console.log("PLAY ERROR");
-
-    console.log(err);
+    alert("VIDEO ERROR:\n" + err.name + "\n" + err.message);
 
 });
 
