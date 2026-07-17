@@ -61,12 +61,15 @@ async function startVideo(){
 
     const frame = document.querySelector(".video-frame");
 
+const video = originVideo;
+
 frame.prepend(video);
 
-    video.style.display = "";
-    const video = originVideo;
+video.style.display = "";
 
 video.volume = 1;
+
+video.currentTime = 0;
 
 video.addEventListener("loadeddata",()=>{
 
@@ -107,6 +110,8 @@ video.play().catch(err=>{
 });
 
 video.onended = async ()=>{
+
+    video.style.display = "none";
 
     await signalTransition();
 
