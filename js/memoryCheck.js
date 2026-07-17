@@ -163,15 +163,19 @@ async function startMemoryCheck(){
 
     message.style.opacity = "0";
 
-    await pause(300);
+await pause(300);
 
-    message.innerHTML = `
-        LES DADES NO COINCIDEIXEN AMB L'ARXIU ORIGEN.
-        <br>
-        TORNA-HO A INTENTAR.
-    `;
+message.className = "memory-error";
 
-    message.style.opacity = "1";
+message.innerHTML = `
+    VERIFICACIÓ FALLIDA
+    <br>
+    L'ORDRE DE LES UNITATS NO COINCIDEIX AMB L'ARXIU ORIGEN.
+    <br>
+    TORNA-HO A INTENTAR.
+`;
+
+message.style.opacity = "1";
 
     await pause(2000);
 
