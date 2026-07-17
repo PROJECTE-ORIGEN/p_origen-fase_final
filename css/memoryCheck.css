@@ -136,7 +136,11 @@
 
 #memoryCheck .panel-title{
 
+    text-align:center;
+
     color:#c28cff;
+
+    margin-bottom:28px;
 
     text-shadow:
         0 0 12px rgba(194,140,255,.55),
