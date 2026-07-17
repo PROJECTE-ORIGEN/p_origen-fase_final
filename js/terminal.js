@@ -83,3 +83,17 @@ function activateSecureChannel(){
     );
 
 }
+
+/* ==========================================================
+   GLITCH VISUAL
+========================================================== */
+
+async function terminalVisualGlitch(){
+
+    document.body.classList.add("terminal-glitch");
+
+    await pause(220);
+
+    document.body.classList.remove("terminal-glitch");
+
+}

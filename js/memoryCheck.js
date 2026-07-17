@@ -165,7 +165,7 @@ async function startMemoryCheck(){
 
         await pause(900);
 
-        await terminalGlitch();
+        await terminalVisualGlitch();
 
         await pause(300);
 
