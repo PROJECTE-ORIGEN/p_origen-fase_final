@@ -39,7 +39,7 @@ async function startMemoryCheck(){
 
             <div class="memory-text">
 
-                Benvolgut agent,
+                Benvolgut/da Agent,
 
             </div>
 
