@@ -776,3 +776,44 @@ input{
     width:95%;
 
 }
+
+/* ==========================================================
+   MÒBIL · PANTALLA FINAL
+========================================================== */
+
+@media (max-width:768px){
+
+    .ending-bottom{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:28px;
+
+    }
+
+    .ending-message{
+
+    max-width:320px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    line-height:1.8;
+
+}
+    .ending-signatures{
+
+        width:180px;
+
+        margin:0;
+
+        align-self:flex-end;
+
+    }
+
+}
