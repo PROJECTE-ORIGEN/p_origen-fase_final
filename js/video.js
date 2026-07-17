@@ -111,7 +111,11 @@ video.play().catch(err=>{
 
 video.onended = async ()=>{
 
-    video.style.display = "none";
+    if(isMobile()){
+
+        video.style.display = "none";
+
+    }
 
     await signalTransition();
 
