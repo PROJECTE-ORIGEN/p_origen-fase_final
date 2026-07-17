@@ -20,7 +20,8 @@ async function startVideo(){
                     preload="auto">
 
                 <source
-                    src="media/video/IMG_0399.MOV"
+                    src="media/video/IMG_0399.mp4"
+                    type="video/mp4">
 
             </video>
 
@@ -46,7 +47,32 @@ async function startVideo(){
 
     const video = document.getElementById("originVideo");
 
-video.volume = 1;
+    video.volume = 1;
+
+    video.addEventListener("loadeddata", () => {
+
+    console.log("VIDEO CARREGAT");
+
+});
+
+video.addEventListener("playing", () => {
+
+    console.log("VIDEO REPRODUINT");
+
+});
+
+video.addEventListener("error", (e) => {
+
+    console.log("ERROR VIDEO", video.error);
+
+});
+
+video.play().catch(err => {
+
+    console.log("PLAY ERROR", err);
+
+});
+
 video.muted = false;
 
 video.load();
