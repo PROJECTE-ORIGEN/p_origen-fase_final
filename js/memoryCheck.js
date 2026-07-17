@@ -157,37 +157,39 @@ async function startMemoryCheck(){
 
         if(!correcte){
 
-            button.classList.add("memory-button-error");
+    button.classList.add("memory-button-error");
 
-            message.className = "memory-error";
+    message.className = "memory-error";
 
-            message.style.opacity="0";
+    message.style.opacity = "0";
 
-        await pause(300);
+    await pause(300);
 
-        message.innerHTML="";
+    message.innerHTML = `
+        LES DADES NO COINCIDEIXEN AMB L'ARXIU ORIGEN.
+        <br>
+        TORNA-HO A INTENTAR.
+    `;
 
-        message.className = "";
+    message.style.opacity = "1";
 
-        message.style.opacity="1";`
+    await pause(2000);
 
+    message.style.opacity = "0";
 
-                LES DADES NO COINCIDEIXEN AMB L'ARXIU ORIGEN.
-                <br>
-                TORNA-HO A INTENTAR.
+    await pause(300);
 
-            `;
+    message.innerHTML = "";
 
-            await pause(2000);
+    message.className = "";
 
-            button.classList.remove("memory-button-error");
+    message.style.opacity = "1";
 
-            message.innerHTML = "";
+    button.classList.remove("memory-button-error");
 
-            return;
+    return;
 
-        }
-
+}
         button.disabled = true;
 
         button.classList.add("memory-button-success");
