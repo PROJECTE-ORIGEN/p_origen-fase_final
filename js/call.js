@@ -105,6 +105,12 @@ document
 
 async function startCommunication(){
 
+    if(isMobile()){
+
+        await unlockMedia();
+
+    }
+    
     incomingSound.pause();
 
     incomingSound.currentTime = 0;

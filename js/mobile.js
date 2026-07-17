@@ -174,3 +174,31 @@ function unlockMedia(){
     });
 
 }
+
+/* ==========================================================
+   UNLOCK MULTIMÈDIA IOS
+========================================================== */
+
+async function unlockMedia(){
+
+    const audios = document.querySelectorAll("audio");
+
+    for(const audio of audios){
+
+        try{
+
+            audio.muted = true;
+
+            await audio.play();
+
+            audio.pause();
+
+            audio.currentTime = 0;
+
+            audio.muted = false;
+
+        }catch(e){}
+
+    }
+
+}
