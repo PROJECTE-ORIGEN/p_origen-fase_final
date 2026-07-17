@@ -60,7 +60,8 @@ async function startMemoryCheck(){
 
             <div class="memory-help">
 
-                Toca una unitat per intercanviar-la amb la superior.
+                Toca una unitat per fer-la pujar a la posició superior.
+                Si cliques la de dalt de tot, anirà al final...
                 Quan creguis que l'ordre és correcte, prem
                 <strong>VALIDAR</strong>.
 
