@@ -49,18 +49,56 @@ async function startVideo(){
 
 video.volume = 1;
 
-video.play().catch(()=>{});
+video.addEventListener("loadeddata",()=>{
 
-    video.onended = async ()=>{
+    console.log("VIDEO CARREGAT");
 
-        await signalTransition();
+});
 
-        clearScreen();
+video.addEventListener("play",()=>{
 
-        await pause(250);
+    console.log("PLAY");
 
-        await startSecureChannel();
+});
 
-    };
+video.addEventListener("playing",()=>{
+
+    console.log("PLAYING");
+
+});
+
+video.addEventListener("pause",()=>{
+
+    console.log("PAUSE");
+
+});
+
+video.addEventListener("error",()=>{
+
+    console.log("ERROR VIDEO");
+
+    console.log(video.error);
+
+});
+
+video.play().catch(err=>{
+
+    console.log("PLAY ERROR");
+
+    console.log(err);
+
+});
+
+video.onended = async ()=>{
+
+    await signalTransition();
+
+    clearScreen();
+
+    await pause(250);
+
+    await startSecureChannel();
+
+};
 
 }
