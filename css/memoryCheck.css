@@ -8,13 +8,15 @@
 
     margin:0 auto;
 
+    padding:10px 6px;
+
 }
 
 .memory-text{
 
     margin-top:18px;
 
-    text-align:center;
+    text-align:left;
 
     color:#9dd8f3;
 
@@ -86,7 +88,7 @@
 
     line-height:1.6;
 
-    text-align:center;
+    text-align:left;
 
     color:rgba(170,220,240,.55);
 
@@ -129,5 +131,15 @@
     border-color:#7effd8;
 
     box-shadow:0 0 14px rgba(120,255,220,.25);
+
+}
+
+#memoryCheck .panel-title{
+
+    color:#c28cff;
+
+    text-shadow:
+        0 0 12px rgba(194,140,255,.55),
+        0 0 28px rgba(160,90,255,.25);
 
 }
