@@ -14,6 +14,42 @@ const UNITATS_CORRECTES = [
 
 ];
 
+let videoUnlocked = false;
+
+async function unlockVideo(){
+
+    if(videoUnlocked) return;
+
+    videoUnlocked = true;
+
+    const video = document.createElement("video");
+
+    video.playsInline = true;
+    video.muted = true;
+    video.preload = "auto";
+
+    video.src = "media/video/IMG_0399.mp4";
+
+    document.body.appendChild(video);
+
+    try{
+
+        await video.play();
+
+        video.pause();
+
+        video.currentTime = 0;
+
+    }catch(e){
+
+        console.log("VIDEO UNLOCK:", e);
+
+    }
+
+    video.remove();
+
+}
+
 async function startMemoryCheck(){
 
     clearScreen();
@@ -112,6 +148,8 @@ async function startMemoryCheck(){
                         unlockMedia();
 
                     }
+
+            await unlockVideo();
 
                 }
 

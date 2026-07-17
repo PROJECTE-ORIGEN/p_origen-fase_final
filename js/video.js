@@ -15,7 +15,6 @@ async function startVideo(){
 
                 <video
                     id="originVideo"
-                    autoplay
                     playsinline
                     preload="auto">
 
