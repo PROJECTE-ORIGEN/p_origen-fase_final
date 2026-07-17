@@ -33,25 +33,50 @@ async function startMemoryCheck(){
 
             <div class="panel-title glow">
 
-                VERIFICACIÓ DE MEMÒRIA
+                PROJECTE ORIGEN - FASE FINAL
 
             </div>
 
             <div class="memory-text">
 
-                Només els agents que han participat al 
-                PROJECTE ORIGEN poden continuar.
+                Benvolgut agent,
 
             </div>
 
             <div class="memory-text">
 
-                Ordena les Unitats
-                de més jove a més veterana.
+                Només els que heu participat al
+                <strong>PROJECTE ORIGEN</strong>
+                podreu continuar.
+
+            </div>
+
+            <div class="memory-text">
+
+                Ordena les Unitats de més jove a més veterana
+                i demostra que has format part de la missió.
+
+            </div>
+
+            <div class="memory-help">
+
+                Toca una unitat per intercanviar-la amb la superior.
+                Quan creguis que l'ordre és correcte, prem
+                <strong>VALIDAR</strong>.
 
             </div>
 
             <div id="memoryList"></div>
+
+            <div class="memory-actions">
+
+            <button id="memoryCheckButton">
+
+                VALIDAR
+
+            </button>
+
+        </div>
 
         </div>
 
@@ -102,7 +127,9 @@ async function startMemoryCheck(){
 
                 render();
 
-                comprova();
+                document
+                    .getElementById("memoryCheckButton")
+                    .onclick = comprova;
 
             };
 
