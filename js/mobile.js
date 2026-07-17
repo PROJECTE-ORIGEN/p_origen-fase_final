@@ -140,3 +140,37 @@ async function mobileCredentialInput(log, question){
     });
 
 }
+
+/* ==========================================================
+   UNLOCK ÀUDIO / VÍDEO IOS
+========================================================== */
+
+let mediaUnlocked = false;
+
+function unlockMedia(){
+
+    if(mediaUnlocked) return;
+
+    mediaUnlocked = true;
+
+    const medias = document.querySelectorAll("audio, video");
+
+    medias.forEach(media=>{
+
+        const promise = media.play();
+
+        if(promise){
+
+            promise.then(()=>{
+
+                media.pause();
+
+                media.currentTime = 0;
+
+            }).catch(()=>{});
+
+        }
+
+    });
+
+}

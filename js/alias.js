@@ -130,6 +130,11 @@ async function checkAlias(alias,card){
 
     card.classList.add("alias-success");
 
+    if(isMobile()){
+
+    unlockMedia();
+
+}
 // Fem desaparèixer les incorrectes
 
 const others = [...document.querySelectorAll(".alias-card")];
