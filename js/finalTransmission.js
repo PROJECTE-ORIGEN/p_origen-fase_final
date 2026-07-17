@@ -149,6 +149,75 @@ async function waitFinalCommand(){
 
 async function terminalPrompt(){
 
+    // ---------- MÒBIL ----------
+    if(isMobile()){
+
+        const wrapper = document.createElement("div");
+
+        wrapper.className = "mobile-auth";
+
+        wrapper.innerHTML = `
+
+            <input
+                class="mobile-auth-input"
+                placeholder="ESCRIU: TANCAR"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="characters"
+                spellcheck="false">
+
+            <button
+                class="mobile-auth-button">
+
+                TANCAR CANAL
+
+            </button>
+
+        `;
+
+        output.appendChild(wrapper);
+
+        terminalScroll();
+
+        const input = wrapper.querySelector("input");
+        const button = wrapper.querySelector("button");
+
+        input.focus();
+
+        function validar(){
+
+            if(input.value.trim().toUpperCase() !== "TANCAR"){
+
+                input.focus();
+
+                return;
+
+            }
+
+            wrapper.remove();
+
+            finishCommand();
+
+        }
+
+        button.onclick = validar;
+
+        input.addEventListener("keydown",(e)=>{
+
+            if(e.key==="Enter"){
+
+                validar();
+
+            }
+
+        });
+
+        return;
+
+    }
+
+    // ---------- ORDINADOR ----------
+
     const line =
         document.createElement("div");
 
