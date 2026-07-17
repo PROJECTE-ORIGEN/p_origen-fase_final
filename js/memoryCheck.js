@@ -71,41 +71,43 @@ async function startMemoryCheck(){
 
             <div class="memory-actions">
 
-            <button id="memoryCheckButton">
+                <button id="memoryCheckButton">
 
-                VALIDAR
+                    VALIDAR
 
-            </button>
+                </button>
 
-        </div>
+            </div>
+
+            <div id="memoryMessage"></div>
 
         </div>
 
     `;
 
-    const list=document.getElementById("memoryList");
+    const list = document.getElementById("memoryList");
 
-    let unlocked=false;
+    let unlocked = false;
 
     function render(){
 
-        list.innerHTML="";
+        list.innerHTML = "";
 
         ordre.forEach((nom,index)=>{
 
-            const card=document.createElement("div");
+            const card = document.createElement("div");
 
-            card.className="memory-card";
+            card.className = "memory-card";
 
-            card.textContent=nom;
+            card.textContent = nom;
 
-            card.onclick=async()=>{
+            card.onclick = async ()=>{
 
                 if(!unlocked){
 
-                    unlocked=true;
+                    unlocked = true;
 
-                    if(typeof unlockMedia==="function"){
+                    if(typeof unlockMedia === "function"){
 
                         unlockMedia();
 
@@ -120,8 +122,10 @@ async function startMemoryCheck(){
                 }else{
 
                     [ordre[index],ordre[index-1]]=[
+
                         ordre[index-1],
                         ordre[index]
+
                     ];
 
                 }
@@ -140,30 +144,67 @@ async function startMemoryCheck(){
 
     }
 
-    function comprova(){
+    async function comprova(){
 
-        const correcte=
+        const correcte =
             ordre.every((u,i)=>u===UNITATS_CORRECTES[i]);
 
-        if(!correcte) return;
+        const button =
+            document.getElementById("memoryCheckButton");
+
+        const message =
+            document.getElementById("memoryMessage");
+
+        if(!correcte){
+
+            button.classList.add("memory-button-error");
+
+            message.className = "memory-error";
+
+            message.style.opacity="0";
+
+        await pause(300);
+
+        message.innerHTML="";
+
+        message.className = "";
+
+        message.style.opacity="1";`
+
+
+                LES DADES NO COINCIDEIXEN AMB L'ARXIU ORIGEN.
+                <br>
+                TORNA-HO A INTENTAR.
+
+            `;
+
+            await pause(2000);
+
+            button.classList.remove("memory-button-error");
+
+            message.innerHTML = "";
+
+            return;
+
+        }
+
+        button.disabled = true;
+
+        button.classList.add("memory-button-success");
+
+        button.textContent = "VALIDAT";
+
+        message.className = "memory-success";
+
+        message.textContent = "MEMÒRIA VERIFICADA";
+
+        await pause(900);
 
         correcteMissio();
 
     }
 
     async function correcteMissio(){
-
-        list.innerHTML=`
-
-            <div class="memory-ok">
-
-                ✓ MEMÒRIA VERIFICADA
-
-            </div>
-
-        `;
-
-        await pause(900);
 
         await terminalVisualGlitch();
 
