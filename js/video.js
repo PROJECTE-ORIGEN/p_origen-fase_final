@@ -48,29 +48,8 @@ async function startVideo(){
     const video = document.getElementById("originVideo");
 
 video.volume = 1;
-video.currentTime = 0;
 
-video.addEventListener("loadeddata", () => {
-    console.log("VIDEO CARREGAT");
-});
-
-video.addEventListener("playing", () => {
-    console.log("VIDEO REPRODUINT");
-});
-
-video.addEventListener("error", () => {
-    console.log("ERROR VIDEO", video.error);
-});
-
-try{
-
-    await video.play();
-
-}catch(err){
-
-    console.log("PLAY ERROR", err);
-
-}
+video.play().catch(()=>{});
 
     video.onended = async ()=>{
 

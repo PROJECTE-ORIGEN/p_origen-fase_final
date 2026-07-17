@@ -142,12 +142,12 @@ async function mobileCredentialInput(log, question){
 }
 
 /* ==========================================================
-   UNLOCK ÀUDIO / VÍDEO IOS
+   IOS · UNLOCK MEDIA
 ========================================================== */
 
 let mediaUnlocked = false;
 
-function unlockMedia(){
+async function unlockMedia(){
 
     if(mediaUnlocked) return;
 
@@ -155,47 +155,19 @@ function unlockMedia(){
 
     const medias = document.querySelectorAll("audio, video");
 
-    medias.forEach(media=>{
-
-        const promise = media.play();
-
-        if(promise){
-
-            promise.then(()=>{
-
-                media.pause();
-
-                media.currentTime = 0;
-
-            }).catch(()=>{});
-
-        }
-
-    });
-
-}
-
-/* ==========================================================
-   UNLOCK MULTIMÈDIA IOS
-========================================================== */
-
-async function unlockMedia(){
-
-    const audios = document.querySelectorAll("audio");
-
-    for(const audio of audios){
+    for(const media of medias){
 
         try{
 
-            audio.muted = true;
+            media.muted = true;
 
-            await audio.play();
+            await media.play();
 
-            audio.pause();
+            media.pause();
 
-            audio.currentTime = 0;
+            media.currentTime = 0;
 
-            audio.muted = false;
+            media.muted = false;
 
         }catch(e){}
 
