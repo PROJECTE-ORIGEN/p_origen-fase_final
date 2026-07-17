@@ -47,39 +47,30 @@ async function startVideo(){
 
     const video = document.getElementById("originVideo");
 
-    video.volume = 1;
+video.volume = 1;
+video.currentTime = 0;
 
-    video.addEventListener("loadeddata", () => {
-
+video.addEventListener("loadeddata", () => {
     console.log("VIDEO CARREGAT");
-
 });
 
 video.addEventListener("playing", () => {
-
     console.log("VIDEO REPRODUINT");
-
 });
 
-video.addEventListener("error", (e) => {
-
+video.addEventListener("error", () => {
     console.log("ERROR VIDEO", video.error);
-
 });
 
-video.play().catch(err => {
+try{
+
+    await video.play();
+
+}catch(err){
 
     console.log("PLAY ERROR", err);
 
-});
-
-video.muted = false;
-
-video.load();
-
-video.play().catch(err=>{
-    console.log(err);
-});
+}
 
     video.onended = async ()=>{
 
