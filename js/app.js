@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     resetTerminal();
 
-    showIncomingCall();
+    startMemoryCheck();
 
 });

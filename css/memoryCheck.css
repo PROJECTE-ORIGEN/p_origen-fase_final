@@ -1,0 +1,79 @@
+/* ==========================================================
+   MEMORY CHECK
+========================================================== */
+
+#memoryCheck{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+}
+
+.memory-text{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#9dd8f3;
+
+    line-height:1.7;
+
+}
+
+#memoryList{
+
+    margin-top:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.memory-card{
+
+    padding:16px;
+
+    border:1px solid rgba(120,220,255,.20);
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.03);
+
+    cursor:pointer;
+
+    text-align:center;
+
+    letter-spacing:2px;
+
+    transition:.25s;
+
+}
+
+.memory-card:hover{
+
+    transform:translateY(-2px);
+
+    border-color:#7effd8;
+
+    box-shadow:0 0 18px rgba(120,255,220,.25);
+
+}
+
+.memory-ok{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:#7effc2;
+
+    font-size:24px;
+
+    letter-spacing:4px;
+
+}
