@@ -2,6 +2,32 @@
    VÍDEO
 ========================================================== */
 
+/* ==========================================================
+   VÍDEO GLOBAL
+========================================================== */
+
+let originVideo = null;
+
+function prepareVideo(){
+
+    if(originVideo) return;
+
+    originVideo = document.createElement("video");
+
+    originVideo.id = "originVideo";
+
+    originVideo.src = "media/video/IMG_0399.mp4";
+
+    originVideo.playsInline = true;
+
+    originVideo.preload = "auto";
+
+    originVideo.style.display = "none";
+
+    document.body.appendChild(originVideo);
+
+}
+
 async function startVideo(){
 
     const panel = document.querySelector(".incoming-panel");
@@ -12,17 +38,6 @@ async function startVideo(){
     panel.innerHTML = `
 
         <div class="video-frame">
-
-                <video
-                    id="originVideo"
-                    playsinline
-                    preload="auto">
-
-                <source
-                    src="media/video/IMG_0399.mp4"
-                    type="video/mp4">
-
-            </video>
 
             <div class="video-noise"></div>
 
@@ -44,7 +59,12 @@ async function startVideo(){
 
     `;
 
-    const video = document.getElementById("originVideo");
+    const frame = document.querySelector(".video-frame");
+
+frame.prepend(video);
+
+    video.style.display = "";
+    const video = originVideo;
 
 video.volume = 1;
 
