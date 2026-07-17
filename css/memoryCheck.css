@@ -97,28 +97,26 @@
 .memory-actions{
 
     display:flex;
-
     justify-content:flex-end;
-
-    margin-top:26px;
+    margin-top:24px;
 
 }
 
 #memoryCheckButton{
 
-    padding:10px 18px;
+    padding:10px 20px;
 
-    background:transparent;
+    background:rgba(255,255,255,.05);
 
     border:1px solid rgba(120,220,255,.25);
-
-    border-radius:8px;
 
     color:#9fdcff;
 
     font-family:inherit;
 
     letter-spacing:2px;
+
+    border-radius:8px;
 
     cursor:pointer;
 
@@ -128,8 +126,8 @@
 
 #memoryCheckButton:hover{
 
-    border-color:#73ffd9;
+    border-color:#7effd8;
 
-    box-shadow:0 0 16px rgba(120,255,220,.25);
+    box-shadow:0 0 14px rgba(120,255,220,.25);
 
 }
