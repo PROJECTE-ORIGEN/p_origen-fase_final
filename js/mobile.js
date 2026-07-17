@@ -153,21 +153,13 @@ async function unlockMedia(){
 
     mediaUnlocked = true;
 
-    const medias = document.querySelectorAll("audio, video");
+    const audios = document.querySelectorAll("audio");
 
-    for(const media of medias){
+    for(const audio of audios){
 
         try{
 
-            media.muted = true;
-
-            await media.play();
-
-            media.pause();
-
-            media.currentTime = 0;
-
-            media.muted = false;
+            audio.load();
 
         }catch(e){}
 
